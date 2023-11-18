@@ -4,8 +4,8 @@ from agents.MyAgent import MyAgent
 
 if __name__ == "__main__":
     # Create instances of your agents
-    agent1 = MyAgent("agent1@myserver.com", "password1")
-    agent2 = MyAgent("agent2@myserver.com", "password2")
+    agent1 = MyAgent("agent1@localhost", "123")
+    agent2 = MyAgent("agent2@localhost", "123")
 
     # Start the agents
     asyncio.run(agent1.start())
