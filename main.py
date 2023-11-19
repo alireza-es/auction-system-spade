@@ -1,21 +1,31 @@
 import time
 import asyncio
-from agents.MyAgent import MyAgent
+from constants import AUCTIONEER, BIDDER, SELLER, NOTIFICATION
+from agents import AuctioneerAgent, BidderAgent, SellerAgent, NotificationAgent
 
 if __name__ == "__main__":
-    # Create instances of your agents
-    agent1 = MyAgent("agent1@localhost", "123")
-    agent2 = MyAgent("agent2@localhost", "123")
+    # Create instances of each agent
+    auctioneer = AuctioneerAgent(AUCTIONEER.jid, AUCTIONEER.password)
+    bidder1 = BidderAgent(BIDDER.jid, BIDDER.password)
+    bidder2 = BidderAgent(BIDDER.jid, BIDDER.password)
+    seller = SellerAgent(SELLER.jid, SELLER.password)
+    notification = NotificationAgent(NOTIFICATION.jid, NOTIFICATION.password)
 
     # Start the agents
-    asyncio.run(agent1.start())
-    asyncio.run(agent2.start())
+    asyncio.run(auctioneer.start())
+    asyncio.run(bidder1.start())
+    asyncio.run(bidder2.start())
+    asyncio.run(seller.start())
+    asyncio.run(notification.start())
 
     # Keep the program running
     try:
-        while agent1.is_alive():
+        while auctioneer.is_alive():
             time.sleep(1)
     except KeyboardInterrupt:
-        asyncio.run(agent1.stop())
-        asyncio.run(agent2.stop())
+        asyncio.run(auctioneer.stop())
+        asyncio.run(bidder1.stop())
+        asyncio.run(bidder2.stop())
+        asyncio.run(seller.stop())
+        asyncio.run(notification.stop())
         print("Agents stopped")
