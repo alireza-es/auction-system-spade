@@ -8,6 +8,10 @@ The project has the following structure:
 ```
 .
 ├── auction-system-spade
+│   ├── models
+│   │   ├── __init__.py
+│   │   ├── auction.py
+│   │   └── bid.py
 │   ├── agents
 │   │   ├── __init__.py
 │   │   ├── auctioneer.py
@@ -18,16 +22,35 @@ The project has the following structure:
 │   │   ├── __init__.py
 │   │   ├── receive_bids.py
 │   │   ├── place_bid.py
+│   │   ├── initiate_auction.py
 │   │   ├── monitor_auction.py
 │   │   └── notify_winner.py
 │   ├── main.py
 │   └── README.md
 ```
+## Setting Up the XMPP Server
 
+We use Prosody as the XMPP server. To install Prosody on Ubuntu, run the following command:
 
-- The `agents` directory contains each agent as a separate Python file.
-- The `behaviours` directory contains each behaviour as a separate Python file.
-- `main.py` is the entry point of the application. It creates instances of the agents, starts them, and keeps the program running.
+```bash
+sudo apt-get install prosody
+```
+
+## Creating Agents
+
+To create the agents we need, use the following commands:
+
+```bash
+prosodyctl register auctioneer localhost password
+prosodyctl register bidder localhost password
+prosodyctl register seller localhost password
+prosodyctl register notification localhost password
+```
+
+Replace `password` with a secure password for each agent.
+
+Next steps could include running the auction system, or configuring the XMPP server.
+
 
 ## Agents
 
