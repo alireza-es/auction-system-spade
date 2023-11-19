@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a40943ef-de66-4c7f-a63d-5ede386d799c" name="Changes" comment="Create project">
+    <list default="true" id="a40943ef-de66-4c7f-a63d-5ede386d799c" name="Changes" comment="Create and use real agents">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,9 +49,9 @@
       <window_info id="Commit_Guest" show_stripe_button="false" />
       <window_info id="Pull Requests" show_stripe_button="false" />
       <window_info id="Learn" show_stripe_button="false" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.5008038" weight="0.32994792" />
-      <window_info active="true" id="Commit" order="1" sideWeight="0.8258741" visible="true" weight="0.32994792" />
-      <window_info active="true" id="Structure" order="2" sideWeight="0.17412588" side_tool="true" visible="true" weight="0.32994792" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.50051975" visible="true" weight="0.32994792" />
+      <window_info id="Commit" order="1" sideWeight="0.82588357" weight="0.32994792" />
+      <window_info active="true" id="Structure" order="2" sideWeight="0.49948025" side_tool="true" visible="true" weight="0.32994792" />
       <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
       <window_info anchor="bottom" id="TypeScript" show_stripe_button="false" />
       <window_info anchor="bottom" id="Debug" weight="0.17296511" />
@@ -60,15 +59,15 @@
       <window_info anchor="bottom" id="TODO" show_stripe_button="false" />
       <window_info anchor="bottom" id="File Transfer" show_stripe_button="false" />
       <window_info anchor="bottom" id="Python Console" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Run" visible="true" weight="0.23982558" />
+      <window_info anchor="bottom" id="Run" weight="0.32994187" />
       <window_info anchor="bottom" id="Version Control" order="0" />
-      <window_info anchor="bottom" id="Problems View" order="2" />
-      <window_info anchor="bottom" id="Terminal" order="3" weight="0.32994187" />
-      <window_info anchor="bottom" id="Services" order="4" />
+      <window_info anchor="bottom" id="Problems View" order="1" />
+      <window_info anchor="bottom" id="Terminal" order="2" weight="0.32994187" />
+      <window_info anchor="bottom" id="Services" order="3" />
       <window_info anchor="right" id="Endpoints" show_stripe_button="false" />
       <window_info anchor="right" id="SciView" show_stripe_button="false" />
       <window_info anchor="right" content_ui="combo" id="Notifications" order="0" weight="0.25" />
-      <window_info anchor="right" id="Database" order="2" weight="0.25" />
+      <window_info anchor="right" id="Database" order="1" weight="0.25" />
     </layout>
   </component>
   <component name="RunManager">
@@ -112,6 +111,7 @@
       <option name="presentableId" value="Default" />
       <updated>1700261017584</updated>
       <workItem from="1700261021686" duration="2735000" />
+      <workItem from="1700348279070" duration="741000" />
     </task>
     <task id="LOCAL-00001" summary="Create project">
       <option name="closed" value="true" />
@@ -121,7 +121,15 @@
       <option name="project" value="LOCAL" />
       <updated>1700262430736</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Create and use real agents">
+      <option name="closed" value="true" />
+      <created>1700348400052</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1700348400052</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -129,7 +137,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Create project" />
-    <option name="LAST_COMMIT_MESSAGE" value="Create project" />
+    <MESSAGE value="Create and use real agents" />
+    <option name="LAST_COMMIT_MESSAGE" value="Create and use real agents" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -148,6 +157,6 @@
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/auction_system_spade$main.coverage" NAME="main Coverage Results" MODIFIED="1700264271349" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/auction_system_spade$main.coverage" NAME="main Coverage Results" MODIFIED="1700348312370" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
