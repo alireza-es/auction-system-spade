@@ -24,7 +24,9 @@ The project has the following structure:
 │   │   ├── place_bid.py
 │   │   ├── initiate_auction.py
 │   │   ├── monitor_auction.py
+│   │   ├── end_auction.py
 │   │   └── notify_winner.py
+│   ├── constants.py
 │   ├── main.py
 │   └── README.md
 ```
@@ -65,10 +67,14 @@ The system includes the following agents:
 
 The system includes the following behaviours:
 
-- `ReceiveBidsBehaviour`: This behaviour allows the AuctioneerAgent to receive and process bids.
-- `PlaceBidBehaviour`: This behaviour allows the BidderAgent to place bids.
-- `MonitorAuctionBehaviour`: This behaviour allows the SellerAgent to monitor the auction.
-- `NotifyWinnerBehaviour`: This behaviour allows the NotificationAgent to notify the winner and the seller about the auction outcome.
+- `InitiateAuctionBehaviour`: This behaviour is used by the `SellerAgent` to initiate an auction by sending a request to the `AuctioneerAgent`.
+- `MonitorAuctionBehaviour`: This behaviour is used by the `BidderAgent` to monitor ongoing auctions and decide when to place a bid.
+- `PlaceBidBehaviour`: This behaviour is used by the `BidderAgent` to place a bid on an auction.
+- `ReceiveBidsBehaviour`: This behaviour is used by the `AuctioneerAgent` to receive bids from `BidderAgent`s.
+- `EndAuctionBehaviour`: This behaviour is used by the `AuctioneerAgent` to end auctions when their time is up.
+- `NotifyWinnerBehaviour`: This behaviour is used by the `AuctioneerAgent` to notify the `NotificationAgent` when an auction ends.
+
+Each behaviour is responsible for a specific part of the auction process, and they work together to create a complete online auction system.
 
 ## Running the Project
 
