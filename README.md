@@ -43,10 +43,10 @@ sudo apt-get install prosody
 To create the agents we need, use the following commands:
 
 ```bash
-prosodyctl register auctioneer localhost password
-prosodyctl register bidder localhost password
-prosodyctl register seller localhost password
-prosodyctl register notification localhost password
+sudo prosodyctl register auctioneer localhost password
+sudo prosodyctl register bidder localhost password
+sudo prosodyctl register seller localhost password
+sudo prosodyctl register notification localhost password
 ```
 
 Replace `password` with a secure password for each agent.
