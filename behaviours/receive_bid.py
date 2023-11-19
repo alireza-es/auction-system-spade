@@ -4,6 +4,7 @@ from spade.behaviour import CyclicBehaviour
 from spade.message import Message
 from models.bid import Bid
 
+
 class ReceiveBidBehaviour(CyclicBehaviour):
     async def run(self):
         msg = await self.receive(timeout=10)

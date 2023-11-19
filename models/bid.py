@@ -1,6 +1,7 @@
 # models/bid.py
 from datetime import datetime
 
+
 class Bid:
     def __init__(self, bidder, amount):
         self.bidder = bidder

@@ -3,6 +3,7 @@ import json
 from spade.behaviour import OneShotBehaviour
 from spade.message import Message
 
+
 class PlaceBidBehaviour(OneShotBehaviour):
     def __init__(self, auctioneer_jid, auction_id, amount):
         super().__init__()

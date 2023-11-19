@@ -3,6 +3,7 @@ from spade.behaviour import PeriodicBehaviour
 from datetime import datetime, timedelta
 from behaviours.notify_winner import NotifyWinnerBehaviour
 
+
 class EndAuctionBehaviour(PeriodicBehaviour):
     async def run(self):
         print("Checking if any auctions should be ended")

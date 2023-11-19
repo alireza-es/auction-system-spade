@@ -2,7 +2,8 @@
 import json
 from spade.behaviour import CyclicBehaviour
 from spade.message import Message
-from models.auction import Auction
+from models import Auction
+
 
 class ReceiveInitiateAuctionBehaviour(CyclicBehaviour):
     async def run(self):

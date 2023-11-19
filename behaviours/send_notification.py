@@ -1,6 +1,7 @@
 from spade.behaviour import OneShotBehaviour
 from spade.message import Message
 
+
 class SendNotificationBehaviour(OneShotBehaviour):
     def __init__(self, seller_jid, bidder_jid, item_name, highest_bid):
         super().__init__()

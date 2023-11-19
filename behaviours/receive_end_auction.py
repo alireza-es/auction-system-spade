@@ -1,6 +1,6 @@
 from spade.behaviour import CyclicBehaviour
-from spade.message import Message
 from behaviours.send_notification import SendNotificationBehaviour
+
 
 class ReceiveEndAuctionBehaviour(CyclicBehaviour):
     async def run(self):

@@ -4,6 +4,7 @@ from spade.behaviour import OneShotBehaviour
 from spade.message import Message
 from constants import DEFAULT_AUCTION_TIME_LEFT
 
+
 class InitiateAuctionBehaviour(OneShotBehaviour):
     def __init__(self, auctioneer_jid, item_name, starting_price, time_left=DEFAULT_AUCTION_TIME_LEFT):
         super().__init__()

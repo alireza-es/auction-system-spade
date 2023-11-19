@@ -2,6 +2,7 @@
 from spade.behaviour import OneShotBehaviour
 from spade.message import Message
 
+
 class NotifyWinnerBehaviour(OneShotBehaviour):
     def __init__(self, notification_jid, auction):
         super().__init__()

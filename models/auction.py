@@ -2,6 +2,7 @@
 import time
 from datetime import datetime
 
+
 class Auction:
     def __init__(self, item_name, starting_price, time_left, seller):
         self.id = int(time.time())

@@ -1,6 +1,7 @@
 from spade.agent import Agent
 from behaviours.monitor_auction import MonitorAuctionBehaviour
 
+
 class BidderAgent(Agent):
     def __init__(self, jid, password, verify_security=False):
         super().__init__(jid, password, verify_security)
