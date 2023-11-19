@@ -31,14 +31,16 @@ The project has the following structure:
 │   └── README.md
 ```
 ## Setting Up the XMPP Server
+### Setup the Server and Configure it
 
 We use Prosody as the XMPP server. To install Prosody on Ubuntu, run the following command:
 
 ```bash
 sudo apt-get install prosody
 ```
-
-## Creating Agents
+For additional information, please visit: https://prosody.im/download/
+For configuring, visit: https://prosody.im/doc/configure
+### Creating Agents
 
 To create the agents we need, use the following commands:
 
@@ -52,7 +54,10 @@ sudo prosodyctl register notification localhost password
 Replace `password` with a secure password for each agent.
 
 Next steps could include running the auction system, or configuring the XMPP server.
+For additional information, please visit: https://prosody.im/doc/creating_accounts
 
+### Enable Web Management Console
+For configuring web admin, visit: https://modules.prosody.im/mod_admin_web
 
 ## Agents
 
