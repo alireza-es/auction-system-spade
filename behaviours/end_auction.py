@@ -2,6 +2,7 @@
 from spade.behaviour import PeriodicBehaviour
 from datetime import datetime, timedelta
 from behaviours.notify_winner import NotifyWinnerBehaviour
+from constants import NOTIFICATION
 
 
 class EndAuctionBehaviour(PeriodicBehaviour):
@@ -13,7 +14,7 @@ class EndAuctionBehaviour(PeriodicBehaviour):
                 print(f"Auction {auction_id} has ended")
                 if auction.highest_bid:
                     print(f"The highest bid was {auction.highest_bid.amount} from {auction.highest_bid.bidder}")
-                    b = NotifyWinnerBehaviour(notification_jid="notification@your_xmpp_server.com", auction=auction)
+                    b = NotifyWinnerBehaviour(notification_jid=NOTIFICATION.jid, auction=auction)
                     self.agent.add_behaviour(b)
                 else:
                     print("There were no bids")

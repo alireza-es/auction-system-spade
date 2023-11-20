@@ -4,7 +4,7 @@ from datetime import datetime
 
 
 class Auction:
-    def __init__(self, item_name, starting_price, time_left, seller):
+    def __init__(self, item_name, starting_price, time_left, seller, auctioneer):
         self.id = int(time.time())
         self.item_name = item_name
         self.starting_price = starting_price
@@ -13,6 +13,7 @@ class Auction:
         self.created_on = datetime.now()
         self.bids = []
         self.highest_bid = None
+        self.auctioneer = auctioneer
 
     def place_bid(self, bid):
         self.bids.append(bid)

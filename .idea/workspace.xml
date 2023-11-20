@@ -6,8 +6,14 @@
   <component name="ChangeListManager">
     <list default="true" id="a40943ef-de66-4c7f-a63d-5ede386d799c" name="Changes" comment="Fix and implement template">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/agents/auctioneer.py" beforeDir="false" afterPath="$PROJECT_DIR$/agents/auctioneer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/behaviours/end_auction.py" beforeDir="false" afterPath="$PROJECT_DIR$/behaviours/end_auction.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/behaviours/initiate_auction.py" beforeDir="false" afterPath="$PROJECT_DIR$/behaviours/initiate_auction.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/behaviours/monitor_auction.py" beforeDir="false" afterPath="$PROJECT_DIR$/behaviours/monitor_auction.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/behaviours/receive_initiate_auction.py" beforeDir="false" afterPath="$PROJECT_DIR$/behaviours/receive_initiate_auction.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/constants.py" beforeDir="false" afterPath="$PROJECT_DIR$/constants.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/auction.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/auction.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,7 +36,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "Python.main.executor": "Debug",
+    "Python.main.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
@@ -51,17 +57,17 @@
       <window_info id="Commit_Guest" show_stripe_button="false" />
       <window_info id="Pull Requests" show_stripe_button="false" />
       <window_info id="Learn" show_stripe_button="false" />
-      <window_info id="Commit" order="1" sideWeight="0.82426304" weight="0.21015625" />
-      <window_info active="true" id="Structure" order="2" sideWeight="0.24573055" side_tool="true" visible="true" weight="0.21015625" />
-      <window_info active="true" content_ui="combo" id="Project" order="3" sideWeight="0.7542695" visible="true" weight="0.21015625" />
+      <window_info id="Commit" order="0" sideWeight="0.82409793" weight="0.21015625" />
+      <window_info active="true" id="Structure" order="1" sideWeight="0.24658704" side_tool="true" visible="true" weight="0.21015625" />
+      <window_info active="true" content_ui="combo" id="Project" order="2" sideWeight="0.75341296" visible="true" weight="0.21015625" />
       <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
       <window_info anchor="bottom" id="TypeScript" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Debug" visible="true" weight="0.42199612" />
+      <window_info anchor="bottom" id="Debug" weight="0.36482558" />
       <window_info anchor="bottom" id="Python Packages" show_stripe_button="false" />
       <window_info anchor="bottom" id="TODO" show_stripe_button="false" />
       <window_info anchor="bottom" id="File Transfer" show_stripe_button="false" />
       <window_info anchor="bottom" id="Python Console" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Run" weight="0.39486435" />
+      <window_info active="true" anchor="bottom" id="Run" visible="true" weight="0.36482558" />
       <window_info anchor="bottom" id="Find" />
       <window_info anchor="bottom" id="Version Control" order="0" />
       <window_info anchor="bottom" id="Problems View" order="1" />
@@ -117,6 +123,7 @@
       <workItem from="1700261021686" duration="2735000" />
       <workItem from="1700348279070" duration="741000" />
       <workItem from="1700423987282" duration="12149000" />
+      <workItem from="1700466231963" duration="5200000" />
     </task>
     <task id="LOCAL-00001" summary="Create project">
       <option name="closed" value="true" />
@@ -182,18 +189,23 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/behaviours/monitor_auction.py</url>
+          <line>19</line>
+          <option name="timeStamp" value="42" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/behaviours/place_bid.py</url>
+          <line>15</line>
+          <option name="timeStamp" value="43" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/behaviours/end_auction.py</url>
           <line>10</line>
-          <option name="timeStamp" value="27" />
+          <option name="timeStamp" value="44" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/behaviours/receive_initiate_auction.py</url>
+          <url>file://$PROJECT_DIR$/behaviours/notify_winner.py</url>
           <line>12</line>
-          <option name="timeStamp" value="30" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/behaviours/monitor_auction.py</url>
-          <line>13</line>
-          <option name="timeStamp" value="31" />
+          <option name="timeStamp" value="46" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -201,12 +213,12 @@
       <configuration name="PythonConfigurationType">
         <watch expression="list(self.agent.auctions.items())" />
       </configuration>
-      <inline-watch fileUrl="file://$PROJECT_DIR$/behaviours/monitor_auction.py" line="9">
+      <inline-watch fileUrl="file://$PROJECT_DIR$/behaviours/monitor_auction.py" line="11">
         <watch expression="self.agent.auctions.items()" language="Python" />
       </inline-watch>
     </watches-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/auction_system_spade$main.coverage" NAME="main Coverage Results" MODIFIED="1700447435997" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/auction_system_spade$main.coverage" NAME="main Coverage Results" MODIFIED="1700471534425" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

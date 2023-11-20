@@ -19,6 +19,7 @@ class InitiateAuctionBehaviour(OneShotBehaviour):
         msg.set_metadata("performative", Performative.REQUEST.value)
         msg.set_metadata("action", Actions.START_AUCTION.value)
         msg.body = json.dumps({
+            "auctioneer": self.auctioneer_jid,
             "item_name": self.item_name,
             "starting_price": self.starting_price,
             "time_left": self.time_left,

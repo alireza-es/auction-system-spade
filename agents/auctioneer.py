@@ -1,7 +1,7 @@
 from spade.agent import Agent
 from spade.template import Template
 
-from behaviours import ReceiveBidBehaviour, ReceiveInitiateAuctionBehaviour
+from behaviours import ReceiveBidBehaviour, ReceiveInitiateAuctionBehaviour, EndAuctionBehaviour
 from constants import Performative, Actions
 
 
@@ -24,3 +24,6 @@ class AuctioneerAgent(Agent):
         auction_template.set_metadata("action", Actions.START_AUCTION.value)
         receive_auction_behaviour = ReceiveInitiateAuctionBehaviour()
         self.add_behaviour(receive_auction_behaviour, auction_template)
+
+        end_auction_behaviour = EndAuctionBehaviour(period=2)  # Check auctions every 10 seconds
+        self.add_behaviour(end_auction_behaviour)

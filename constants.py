@@ -2,7 +2,7 @@
 from dataclasses import dataclass
 from enum import Enum
 
-DEFAULT_AUCTION_TIME_LEFT = 15  # in minutes
+DEFAULT_AUCTION_TIME_LEFT = 60  # in seconds
 
 
 @dataclass

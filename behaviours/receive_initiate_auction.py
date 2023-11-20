@@ -12,5 +12,6 @@ class ReceiveInitiateAuctionBehaviour(CyclicBehaviour):
         if msg:
             print(f"AuctioneerAgent received an initiate auction message: {msg.body}")
             data = json.loads(msg.body)
-            auction = Auction(data["item_name"], int(data["starting_price"]), int(data["time_left"]), data["seller"])
+            auction = Auction(data["item_name"], int(data["starting_price"]), int(data["time_left"]), data["seller"],
+                              data["auctioneer"])
             self.agent.auctions[auction.id] = auction

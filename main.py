@@ -8,7 +8,7 @@ if __name__ == "__main__":
     auctioneer = AuctioneerAgent(AUCTIONEER.jid, AUCTIONEER.password)
     seller = SellerAgent(SELLER.jid, SELLER.password, auctioneer_jid=AUCTIONEER.jid, item_name="Car", starting_price=100, time_left=10)
     bidder1 = BidderAgent(BIDDER.jid, BIDDER.password, auctions=auctioneer.auctions)
-    bidder2 = BidderAgent(BIDDER.jid, BIDDER.password, auctions=auctioneer.auctions)
+    # bidder2 = BidderAgent(BIDDER.jid, BIDDER.password, auctions=auctioneer.auctions)
     notification = NotificationAgent(NOTIFICATION.jid, NOTIFICATION.password)
 
     # Create a single event loop
@@ -16,9 +16,9 @@ if __name__ == "__main__":
 
     # Start the agents
     loop.run_until_complete(auctioneer.start())
-    loop.run_until_complete(bidder1.start())
-    loop.run_until_complete(bidder2.start())
     loop.run_until_complete(seller.start())
+    loop.run_until_complete(bidder1.start())
+    # loop.run_until_complete(bidder2.start())
     loop.run_until_complete(notification.start())
 
     # Keep the program running
