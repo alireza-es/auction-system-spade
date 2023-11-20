@@ -9,8 +9,10 @@ class MonitorAuctionBehaviour(PeriodicBehaviour):
         print("Monitoring auctions")
         for auction_id, auction in list(self.agent.auctions.items()):
             if auction.time_left > 0:
+                # print(
+                #     f"Auction {auction_id} for {auction.item_name} is ongoing with highest bid {auction.highest_bid.amount}")
                 print(
-                    f"Auction {auction_id} for {auction.item_name} is ongoing with highest bid {auction.highest_bid.amount}")
+                    f"Auction {auction_id} for {auction.item_name} is ongoing with highest bid {auction.highest_bid}")
                 if self.should_place_bid(auction):
                     amount = randint(auction.highest_bid.amount + 1, auction.highest_bid.amount + 10)
                     b = PlaceBidBehaviour(auctioneer_jid=auction.auctioneer_jid, auction_id=auction_id, amount=amount)

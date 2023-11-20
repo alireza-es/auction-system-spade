@@ -6,9 +6,9 @@ from constants import AUCTIONEER, BIDDER, SELLER, NOTIFICATION
 if __name__ == "__main__":
     # Create instances of each agent
     auctioneer = AuctioneerAgent(AUCTIONEER.jid, AUCTIONEER.password)
-    bidder1 = BidderAgent(BIDDER.jid, BIDDER.password)
-    bidder2 = BidderAgent(BIDDER.jid, BIDDER.password)
-    seller = SellerAgent(SELLER.jid, SELLER.password)
+    seller = SellerAgent(SELLER.jid, SELLER.password, auctioneer_jid=AUCTIONEER.jid, item_name="Car", starting_price=100, time_left=10)
+    bidder1 = BidderAgent(BIDDER.jid, BIDDER.password, auctions=auctioneer.auctions)
+    bidder2 = BidderAgent(BIDDER.jid, BIDDER.password, auctions=auctioneer.auctions)
     notification = NotificationAgent(NOTIFICATION.jid, NOTIFICATION.password)
 
     # Create a single event loop

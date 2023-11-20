@@ -1,5 +1,5 @@
 from spade.agent import Agent
-from behaviours import ReceiveBidBehaviour
+from behaviours import ReceiveBidBehaviour, ReceiveInitiateAuctionBehaviour
 
 
 class AuctioneerAgent(Agent):
@@ -9,5 +9,9 @@ class AuctioneerAgent(Agent):
 
     async def setup(self):
         print("AuctioneerAgent started")
-        b = ReceiveBidBehaviour()
-        self.add_behaviour(b)
+
+        receive_bid_behaviour = ReceiveBidBehaviour()
+        self.add_behaviour(receive_bid_behaviour)
+
+        receive_auction_behaviour = ReceiveInitiateAuctionBehaviour()
+        self.add_behaviour(receive_auction_behaviour)

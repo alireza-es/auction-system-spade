@@ -6,26 +6,16 @@
   <component name="ChangeListManager">
     <list default="true" id="a40943ef-de66-4c7f-a63d-5ede386d799c" name="Changes" comment="Run agent registration command with sudo access">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/agents/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/agents/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/agents/auctioneer.py" beforeDir="false" afterPath="$PROJECT_DIR$/agents/auctioneer.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/agents/bidder.py" beforeDir="false" afterPath="$PROJECT_DIR$/agents/bidder.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/agents/notification.py" beforeDir="false" afterPath="$PROJECT_DIR$/agents/notification.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/agents/seller.py" beforeDir="false" afterPath="$PROJECT_DIR$/agents/seller.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/behaviours/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/behaviours/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/behaviours/end_auction.py" beforeDir="false" afterPath="$PROJECT_DIR$/behaviours/end_auction.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/behaviours/initiate_auction.py" beforeDir="false" afterPath="$PROJECT_DIR$/behaviours/initiate_auction.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/behaviours/monitor_auction.py" beforeDir="false" afterPath="$PROJECT_DIR$/behaviours/monitor_auction.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/behaviours/notify_winner.py" beforeDir="false" afterPath="$PROJECT_DIR$/behaviours/notify_winner.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/behaviours/place_bid.py" beforeDir="false" afterPath="$PROJECT_DIR$/behaviours/place_bid.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/behaviours/receive_bid.py" beforeDir="false" afterPath="$PROJECT_DIR$/behaviours/receive_bid.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/behaviours/receive_end_auction.py" beforeDir="false" afterPath="$PROJECT_DIR$/behaviours/receive_end_auction.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/behaviours/receive_initiate_auction.py" beforeDir="false" afterPath="$PROJECT_DIR$/behaviours/receive_initiate_auction.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/behaviours/send_notification.py" beforeDir="false" afterPath="$PROJECT_DIR$/behaviours/send_notification.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/constants.py" beforeDir="false" afterPath="$PROJECT_DIR$/constants.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/auction.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/auction.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/bid.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/bid.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,21 +60,23 @@
       <window_info id="Pull Requests" show_stripe_button="false" />
       <window_info id="Learn" show_stripe_button="false" />
       <window_info id="Commit" order="1" sideWeight="0.8255627" weight="0.32994792" />
-      <window_info active="true" id="Structure" order="2" sideWeight="0.24628714" side_tool="true" visible="true" weight="0.21015625" />
-      <window_info active="true" content_ui="combo" id="Project" order="3" sideWeight="0.7537129" visible="true" weight="0.21015625" />
+      <window_info active="true" id="Structure" order="2" sideWeight="0.24594595" side_tool="true" visible="true" weight="0.21015625" />
+      <window_info active="true" content_ui="combo" id="Project" order="3" sideWeight="0.75405407" visible="true" weight="0.21015625" />
       <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
       <window_info anchor="bottom" id="TypeScript" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Debug" visible="true" weight="0.54118216" />
+      <window_info active="true" anchor="bottom" id="Debug" visible="true" weight="0.39486435" />
       <window_info anchor="bottom" id="Python Packages" show_stripe_button="false" />
       <window_info anchor="bottom" id="TODO" show_stripe_button="false" />
       <window_info anchor="bottom" id="File Transfer" show_stripe_button="false" />
       <window_info anchor="bottom" id="Python Console" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Run" weight="0.32994187" />
+      <window_info anchor="bottom" id="Run" weight="0.39486435" />
+      <window_info anchor="bottom" id="Find" />
       <window_info anchor="bottom" id="Version Control" order="0" />
       <window_info anchor="bottom" id="Problems View" order="1" />
       <window_info anchor="bottom" id="Terminal" order="2" weight="0.32994187" />
       <window_info anchor="bottom" id="Services" order="3" />
       <window_info anchor="right" id="Endpoints" show_stripe_button="false" />
+      <window_info anchor="right" id="Coverage" side_tool="true" />
       <window_info anchor="right" id="SciView" show_stripe_button="false" />
       <window_info anchor="right" content_ui="combo" id="Notifications" order="0" weight="0.25" />
       <window_info anchor="right" id="Database" order="1" weight="0.25" />
@@ -132,7 +124,7 @@
       <updated>1700261017584</updated>
       <workItem from="1700261021686" duration="2735000" />
       <workItem from="1700348279070" duration="741000" />
-      <workItem from="1700423987282" duration="3497000" />
+      <workItem from="1700423987282" duration="9522000" />
     </task>
     <task id="LOCAL-00001" summary="Create project">
       <option name="closed" value="true" />
@@ -174,14 +166,29 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/main.py</url>
-          <line>7</line>
-          <option name="timeStamp" value="3" />
+          <url>file://$PROJECT_DIR$/behaviours/monitor_auction.py</url>
+          <line>10</line>
+          <option name="timeStamp" value="17" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/behaviours/receive_initiate_auction.py</url>
+          <line>11</line>
+          <option name="timeStamp" value="21" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/behaviours/receive_bid.py</url>
+          <line>12</line>
+          <option name="timeStamp" value="22" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/behaviours/receive_initiate_auction.py</url>
+          <line>13</line>
+          <option name="timeStamp" value="23" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/auction_system_spade$main.coverage" NAME="main Coverage Results" MODIFIED="1700435692316" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/auction_system_spade$main.coverage" NAME="main Coverage Results" MODIFIED="1700442934091" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
