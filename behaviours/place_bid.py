@@ -2,7 +2,7 @@
 import json
 from spade.behaviour import OneShotBehaviour
 from spade.message import Message
-from constants import Performative, Template
+from constants import Performative, Actions
 
 
 class PlaceBidBehaviour(OneShotBehaviour):
@@ -16,7 +16,7 @@ class PlaceBidBehaviour(OneShotBehaviour):
         print(f"BidderAgent is placing a bid of {self.amount} on auction {self.auction_id}")
         msg = Message(to=self.auctioneer_jid)
         msg.set_metadata("performative", Performative.REQUEST.value)
-        msg.set_metadata("template", Template.PLACE_BID.value)
+        msg.set_metadata("action", Actions.PLACE_BID.value)
         msg.body = json.dumps({
             "auction_id": self.auction_id,
             "amount": self.amount,

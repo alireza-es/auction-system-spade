@@ -17,7 +17,7 @@ SELLER = AgentInfo(jid="seller@localhost", password="123")
 NOTIFICATION = AgentInfo(jid="notification@localhost", password="123")
 
 
-class Template(Enum):
+class Actions(Enum):
     START_AUCTION = 'start_auction'
     PLACE_BID = 'place_bid'
 

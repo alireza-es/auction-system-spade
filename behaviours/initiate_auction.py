@@ -2,7 +2,7 @@
 import json
 from spade.behaviour import OneShotBehaviour
 from spade.message import Message
-from constants import DEFAULT_AUCTION_TIME_LEFT, Performative, Template
+from constants import DEFAULT_AUCTION_TIME_LEFT, Performative, Actions
 
 
 class InitiateAuctionBehaviour(OneShotBehaviour):
@@ -17,7 +17,7 @@ class InitiateAuctionBehaviour(OneShotBehaviour):
         print(f"SellerAgent is initiating an auction for {self.item_name}")
         msg = Message(to=self.auctioneer_jid)
         msg.set_metadata("performative", Performative.REQUEST.value)
-        msg.set_metadata("template", Template.START_AUCTION.value)
+        msg.set_metadata("action", Actions.START_AUCTION.value)
         msg.body = json.dumps({
             "item_name": self.item_name,
             "starting_price": self.starting_price,
