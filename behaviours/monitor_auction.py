@@ -9,8 +9,6 @@ class MonitorAuctionBehaviour(PeriodicBehaviour):
         print("Monitoring auctions")
         for auction_id, auction in list(self.agent.auctions.items()):
             if auction.time_left > 0:
-                # print(
-                #     f"Auction {auction_id} for {auction.item_name} is ongoing with highest bid {auction.highest_bid.amount}")
                 print(
                     f"Auction {auction_id} for {auction.item_name} is ongoing with highest bid {auction.highest_bid}")
                 if self.should_place_bid(auction):
@@ -20,4 +18,5 @@ class MonitorAuctionBehaviour(PeriodicBehaviour):
 
     def should_place_bid(self, auction):
         # Add your bidding strategy here. For example, you might check if the current highest bid is less than a certain amount.
-        return auction.highest_bid.amount < 100
+        # return auction.highest_bid < 100
+        return True

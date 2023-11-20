@@ -10,7 +10,6 @@ class ReceiveBidBehaviour(CyclicBehaviour):
     async def run(self):
         msg = await self.receive(timeout=10)
         if msg:
-            # if msg.get_metadata('performative') == Performative.REQUEST.value and msg.get_metadata('template') == Actions.PLACE_BID.value:
             print(f"AuctioneerAgent received a bid: {msg.body}")
             data = json.loads(msg.body)
             bid = Bid(msg.sender, int(data["amount"]))
